@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Zomato Clone</title>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .a{
+            width: 100%;
+            height: 450px;
+            border: transparent;
+            background-image: url(./Images/81f3ff974d82520780078ba1cfbd453a1583259680.avif);
+            position: relative;
+            overflow-x: hidden;
+        }
+        nav{
+            width: 1300px;
+            height: 70px;
+            border: transparent;
+        }
+        .a1{
+            position: relative;
+            top: 30px;
+            left: 100px;
+            text-decoration: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a2{
+            position: relative;
+            top: 30px;
+            left: 650px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a3{
+            position: relative;
+            top: 30px;
+            left: 680px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a4{
+            position: relative;
+            top: 30px;
+            left: 710px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a5{
+            position: relative;
+            top: 30px;
+            left: 740px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a6{
+            width: 1300px;
+            height: 100px;
+            border: transparent;
+            background-color: transparent;
+            color: white;
+            font-size: 60px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .a7{
+            position: relative;
+            top: 10px;
+            left: 520px;
+        }
+        .a8{
+            width: 1300px;
+            height: 80px;
+            border: transparent;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a9{
+            position: relative;
+            top: 40px;
+            left: 445px;
+        }
+        .a10{
+            width: 720px;
+            height: 50px;
+            border: transparent;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            position: relative;
+            top: 30px;
+            left: 320px;
+        }
+        .a11{
+            position: relative;
+            top: 8px;
+            left: 15px;
+        }
+        .a12{
+            width: 150px;
+            height: 40px;
+            border: transparent;
+            background-color: whitesmoke;
+            color: gray;
+            position: relative;
+            top: 3px;
+            left: 30px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .a12 option{
+            background-color: whitesmoke;
+        }
+        .a13{
+            position: relative;
+            top: 2px;
+            left: 50px;
+            font-size: 20px;
+            color: gray;
+        }
+        .a14{
+            position: relative;
+            top: 2px;
+            left: 70px; 
+            color: gray;
+        }
+        .a15{
+            width: 400px;
+            height: 40px;
+            border: transparent;
+            background-color: whitesmoke;
+            color: gray;
+            position: relative;
+            top: 2px;
+            left: 95px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .b{
+            width: 100%;
+            height: 380px;
+            border: transparent;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 325px 325px 325px;
+            grid-template-rows: 260px;
+            overflow-x: hidden;
+        }
+        .b div{
+            border: 1px solid lightgrey;
+            position: relative;
+            top: 50px;
+            left: 160px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .b div:hover{
+	        border: 1px solid grey;
+	        box-shadow: 0 0 20px 5px grey;
+        }
+        .c{
+            width: 100%;
+            height: 580px;
+            border: transparent;
+            overflow-x: hidden;
+        }
+        .c1{
+            position: relative;
+            left: 100px;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.8;
+        }
+        .c2{
+            position: relative;
+            top: 10px;
+            left: 102px;
+            opacity: 0.7;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .c3{
+            position: relative;
+            top: -13px;
+            left: 1080px;
+            text-decoration: none;
+            color: red;
+            opacity: 0.6;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .c4{
+            width: 1300px;
+            height: 350px;
+            border: transparent;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 280px 280px 280px 280px;
+            grid-template-rows: 350px;
+            position: relative;
+            top: 30px;
+        }
+        .c4 div{
+            border: transparent;
+            position: relative;
+            left: 95px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .c5{
+            width: 180px;
+            height: 50px;
+            border: transparent;
+            position: relative;
+            top: -60px;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .c6{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .d{
+            width: 100%;
+            height: 480px;
+            border: transparent;
+            overflow-x: hidden;
+        }
+        .d1{
+            position: relative;
+            left: 100px;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.8;
+        }
+        .d2{
+            width: 1300px;
+            height: 350px;
+            border: transparent;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 375px 375px 375px;
+            grid-template-rows: 80px 80px 80px;
+            position: relative;
+            top: 50px;
+        }
+        .d2 div{
+            border: 1px solid lightgrey;
+            position: relative;
+            left: 95px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        .d2 div:hover{
+            box-shadow: 5px 5px 10px lightgray;
+        }
+        .d3{
+            text-decoration: none;
+        }
+        .d4{
+            position: relative;
+            top: 15px;
+            left: 30px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            opacity: 0.9;
+        }
+        .d5{
+            position: relative;
+            top: 18px;
+            left: 30px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            opacity: 0.8;
+        }
+        .d6{
+            position: relative;
+            top: -13px;
+            left: 330px;
+            color: black;
+            opacity: 0.7;
+        }
+        .d7{
+            position: relative;
+            top: 28px;
+            color: black;
+            opacity: 0.7;
+        }
+        .d8{
+            position: relative;
+            top: -18px;
+            left: 330px;
+            color: black;
+            opacity: 0.7;
+        }
+        .e{
+            width: 100%;
+            height: 500px;
+            border: transparent;
+            background-color: rgb(250, 245, 245);
+            display: flex;
+            overflow-x: hidden;
+        }
+        .e1{
+            width: 600px;
+            height: 450px;
+            border: transparent;
+        }
+        .e2{
+            width: 700px;
+            height: 450px;
+            border: transparent;
+        }
+        .e3{
+            position: relative;
+            top: 90px;
+            left: 250px;
+        }
+        .e4{
+            position: relative;
+            top: 50px;
+            left: 20px;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .e5{
+            position: relative;
+            top: 65px;
+            left: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.9;
+        }
+        .e6{
+            width: 300px;
+            height: 30px;
+            border: transparent;
+            display: flex;
+            position: relative;
+            top: 100px;
+            left: 30px;
+            
+        }
+        .e7{
+            width: 150px;
+            height: 20px;
+            border: transparent;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.8;
+        }
+        .e8{
+            width: 150px;
+            height: 20px;
+            border: transparent;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.8;
+        }
+        .e9{
+            width: 600px;
+            height: 60px;
+            border: transparent;
+            display: flex;
+            position: relative;
+            top: 110px;
+            left: 20px;
+            gap: 10px;
+        }
+        .e10{
+            width: 380px;
+            height: 50px;
+            border: transparent;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .e11{
+            width: 210px;
+            height: 50px;
+            border: transparent;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+        .e12{
+            position: relative;
+            top: 140px;
+            left: 20px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.7;
+        }
+        .e13{
+            width: 320px;
+            height: 50px;
+            border: transparent;
+            display: flex;
+            position: relative;
+            top: 170px;
+            left: 20px;
+            gap: 20px;
+        }
+        .e14{
+            width: 150px;
+            height: 50px;
+        }
+        .e15{
+            width: 150px;
+            height: 50px;
+        }
+        .f{
+            width: 100%;
+            height: 550px;
+            border: transparent;
+            overflow-x: hidden;
+        }
+        .f1{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            top: 50px;
+            left: 100px;
+            opacity: 0.8;
+        }
+        .f2{
+            width: 800px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid lightgray;
+            color: gray;
+            position: relative;
+            top: 80px;
+            left: 200px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        .f3{
+            width: 800px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid lightgray;
+            color: gray;
+            position: relative;
+            top: 120px;
+            left: 200px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        .f4{
+            width: 800px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid lightgray;
+            color: gray;
+            position: relative;
+            top: 160px;
+            left: 200px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        .f5{
+            width: 800px;
+            height: 60px;
+            background-color: white;
+            border: 1px solid lightgray;
+            color: gray;
+            position: relative;
+            top: 200px;
+            left: 200px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px;
+        }
+        .g{
+            width: 100%;
+            height: 500px;
+            border: transparent;
+            background-color: whitesmoke;
+            overflow-x: hidden;
+        }
+        .g1{
+            width: 1300px;
+            height: 130px;
+            border: transparent;
+            display: flex;
+        }
+        .g2{
+            width: 200px;
+            height: 40px;
+            border: transparent;
+            font-size: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: relative;
+            top: 40px;
+            left: 100px;
+        }
+        .g3{
+            width: 100px;
+            height: 50px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            position: relative;
+            top: 40px;
+            left: 830px;
+            opacity: 0.8;
+        }
+        .g4{
+            width: 120px;
+            height: 50px;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            position: relative;
+            top: 40px;
+            left: 850px;
+            opacity: 0.8;
+        }
+        .g5{
+            width: 1300px;
+            height: 250px;
+            border: transparent;
+            display: flex;
+        }
+        .g6{
+            width: 230px;
+            height: 250px;
+            border: transparent;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 140px;
+        }
+        .g7{
+            width: 230px;
+            height: 250pxpx;
+            border: transparent;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 140px;
+        }
+        .g8{
+            width: 250px;
+            height: 250px;
+            border: transparent;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 140px;
+        }
+        .g9{
+            width: 230px;
+            height: 250px;
+            border: transparent;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 140px;
+        }
+        .g10{
+            width: 250px;
+            height: 250px;
+            border: transparent;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            left: 140px;
+        }
+        .g11{
+            width: 1150px;
+            position: relative;
+            left: 100px;
+        }
+        .g12{
+            width: 1150px;
+            height: 80px;
+            border: transparent;
+            position: relative;
+            top: 30px;
+            left: 100px;
+            color: black;
+            opacity: 0.5;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="a">
+            <nav>
+                <a href="" class="a1"><span class="material-symbols-outlined" style="font-size: 15px;">install_mobile</span>Get the App</a>
+                <a href="" class="a2">Investor Relations</a>
+                <a href="" class="a3">Add restaurant</a>
+                <a href="" class="a4">Log in</a>
+                <a href="" class="a5">Sign up</a>
+            </nav>
+            <div class="a6">
+                <h1 class="a7"><i>zomato</i></h1>
+            </div>
+            <div class="a8">
+                <h1 class="a9">Discover the best food & drinks in India</h1>
+            </div>
+            <div class="a10">
+                <span class="a11"><i class="fa-solid fa-location-dot fa-2x" style="color: red; opacity: 0.6;"></i></span>
+                <select class="a12">
+                    <option>Location</option>
+                    <option>Hyderabad</option>
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                    <option>Benguluru</option>
+                    <option>Delhi</option>
+                </select>
+                <span class="a13">|</span>
+                <span class="a14"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input class="a15" type = "text" placeholder = "Search for a restaurant, cuisine or a dish">
+            </div>
+        </section>
+    </header>
+    <section class="b">
+        <div>
+            <img src="./Images/e5b8785c257af2a7f354f1addaf37e4e1647364814.avif" width="100%" height="180px" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+            <center>
+                <p style="opacity: 0.9;">Order Online</p>
+                <p style="opacity: 0.7;">Stay home and order to your doorstep</p>
+            </center>
+        </div>
+        <div>
+            <img src="./Images/d026b357feb0d63c997549f6398da8cc1647364915.avif" width="100%" height="180px" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+            <center>
+                <p style="opacity: 0.9;">Dining</p>
+                <p style="opacity: 0.7;">View the city's favourite dining venues</p>
+            </center>
+        </div>
+        <div>
+            <img src="./Images/d9d80ef91cb552e3fdfadb3d4f4379761647365057.avif" width="100%" height="180px" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+            <center>
+                <p style="opacity: 0.9;">Nightlife and Clubs</p>
+                <p style="opacity: 0.7;">Explore the city's top nightlife outlets</p>
+            </center>
+        </div>
+    </section>
+    <section class="c">
+        <p class="c1">Collections</p>
+        <span class="c2"><p>Explore curated lists of top restaurants, cafes, pubs, and bars in India, based on trends</p></span>       
+        <span><a href="" class="c3">All collections in India <i class="fa-solid fa-caret-right"></i></a></span>
+        <div class="c4">
+            <div>
+                <img src="./Images/holi.jpg" width="100%" height="100%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                <div class="c5">
+                    <p>Hip Holi Parties</p>
+                    <a href="" class="c6">See More<i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            <div>
+                <img src="./Images/new in town.jpg" width="100%" height="100%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                <div class="c5">
+                    <p>New In Town</p>
+                    <a href="" class="c6">See More<i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            <div>
+                <img src="./Images/bls.jpg" width="100%" height="100%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                <div class="c5">
+                    <p>Best Live Screenigs</p>
+                    <a href="" class="c6">See More<i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+            <div>
+                <img src="./Images/bih.jpg" width="100%" height="100%" style="border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                <div class="c5">
+                    <p>Best In India</p>
+                    <a href="" class="c6">See More<i class="fa-solid fa-caret-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="d">
+        <p class="d1">Popular localities in and around Hyderabad</p>
+        <div class="d2">
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Jubilee Hills</p>
+                    <p class="d5">367 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Gachibowli</p>
+                    <p class="d5">730 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Banjara Hills</p>
+                    <p class="d5">392 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Hitech City</p>
+                    <p class="d5">336 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Madhapur</p>
+                    <p class="d5">794 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Kondapur</p>
+                    <p class="d5">541 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Kukatpally</p>
+                    <p class="d5">1355 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div>
+                <a href="" class="d3">
+                    <p class="d4">Begumpet</p>
+                    <p class="d5">150 places</p>
+                    <span class="d6"><i class="fa-solid fa-angle-right"></i></span>
+                </a>
+            </div>
+            <div><a href="" class="d3">
+                <Center><p class="d7">See More</p></Center>
+                <br>
+                <span class="d8"><i class="fa-solid fa-chevron-down"></i></span>
+            </a></div>
+        </div>
+    </section>
+    <section class="e">
+        <div class="e1">
+            <img src="./Images/f773629053b24263e69f601925790f301680693809.avif" width="300px" height="350px" class="e3">
+        </div>
+        <div class="e2">
+            <p class="e4">Get the Zomato app</p>
+            <p class="e5">We will send you a link, open it on your phone to download the app</p>
+            <div class="e6">
+                <div class="e7">
+                    <input type = "radio">
+					<label style = "font-size:20px;"> Email</label>
+                </div>
+                <div class="e8">
+                    <input type = "radio">
+					<label style = "font-size:20px;"> Phone</label>
+                </div>
+            </div>
+            <div class="e9">
+                    <input type = "text" placeholder="Email" class="e10">
+                    <a href="" class="e11"><p style="position: relative; top: 12px; left: 35px;">Share App Link</p></a>
+            </div>
+            <p class="e12">Download app from</p>
+            <div class="e13">
+                <div class="e14">
+                    <img src="./Images/23e930757c3df49840c482a8638bf5c31556001144.webp" width="100%" height="100%">
+                </div>
+                <div class="e15">
+                    <img src="./Images/9f0c85a5e33adb783fa0aef667075f9e1556003622.webp" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="f">
+        <p class="f1">Explore options near me</p>
+        <select class="f2" >
+            <option>Popular cuisines near me</option>
+        </select>
+        <select class="f3" >
+            <option>Popular restaurant types near me</option>
+        </select>
+        <select class="f4" >
+            <option>Top Restaurant Chains</option>
+        </select>
+        <select class="f5" >
+            <option>Cities We Deliver To</option>
+        </select>
+    </section>
+    <footer>
+        <section class="g">
+            <div class="g1">
+                <div class="g2">
+                    <h1><i>zomato</i></h1>
+                </div>
+                <select class="g3">
+                    <option>India</option>
+                </select>
+                <select class="g4">
+                    <option>English</option>
+                </select>
+            </div>
+            <div class="g5">
+                <div class="g6">
+                    <p style="font-size: 20px;">ABOUT ZOMATO</p>
+                    <br>
+                    <a href="" style="color: black; opacity: 0.5; text-decoration: none;">
+                        <p>Who We Are</p>  
+                        <p>Blog</p>
+                        <p>Work With Us</p>
+                        <p>Investor Relations</p>
+                        <p>Report Fraud</p>
+                        <p>Press Kit</p>
+                        <p>Contact Us</p>
+                    </a>
+                </div>
+                <div class="g7">
+                    <p style="font-size: 20px;">ZOMAVERSE</p>
+                    <br>
+                    <a href="" style="color: black; opacity: 0.5; text-decoration: none;">
+                        <p>Zomato</p>
+                        <p>Blinkit</p>
+                        <p>Feeding India</p>
+                        <p>Hyperpure</p>
+                        <p>Zomaland</p>
+                    </a>
+                </div>
+                <div class="g8">
+                    <p style="font-size: 20px;">FOR RESTAURANTS</p>
+                    <br>
+                    <a href="" style="color: black; opacity: 0.5; text-decoration: none;">
+                        <p>Partner With Us</p>
+                        <p>Apps For You</p>
+                    </a>
+                </div>
+                <div class="g9">
+                    <p style="font-size: 20px;">LEARN MORE</p>
+                    <br>
+                    <a href="" style="color: black; opacity: 0.5; text-decoration: none;">
+                        <p>Privacy</p>
+                        <p>Security</p>
+                        <p>Terms</p>
+                        <p>Sitemap</p>
+                    </a>
+                </div>
+                <div class="g10">
+                    <p style="font-size: 20px;">SOCIAL LINKS</p>
+                    <br>
+                    <a href="" style="color: black; text-decoration: none;">
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                        <i class="fa-brands fa-square-instagram fa-2x"></i>
+                        <i class="fa-brands fa-square-twitter fa-2x"></i>
+                        <i class="fa-brands fa-square-youtube fa-2x"></i>
+                        <i class="fa-brands fa-square-facebook fa-2x"></i>
+                        <br>
+                        <br>
+                        <img src="./Images/23e930757c3df49840c482a8638bf5c31556001144.webp" width="150px" height="50px">
+                        <br>
+                        <img src="./Images/9f0c85a5e33adb783fa0aef667075f9e1556003622.webp" width="150px" height="50px">
+                    </a>
+                </div>
+            </div>
+            <hr class="g11">
+            <div class="g12">
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
